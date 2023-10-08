@@ -1,0 +1,432 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem;
+    height: 10vh;
+    filter: blur(8);
+    -webkit-filter: blur(8);
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    /* color: white; */
+}
+
+.navlinks ul{
+    display: flex;
+    list-style: none;
+}
+
+.navlinks ul a{
+    text-decoration: none;
+    padding-left: 1.5rem;
+    color: white;
+}
+
+.navlinks ul a:hover{
+    color: yellow;
+}
+
+/* .navlinks ul li{
+    padding-left: 1rem;
+} */
+
+.cart-logo{
+    font-size: 20px;
+    /* font-weight: 900; */
+    background-color: white;
+    color: yellowgreen;
+    border-radius: 4px;
+    padding: 3px 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-amt{
+    position: absolute;
+    top: -11px;
+    right: -7px;
+    padding: 2px;
+    border-radius: 1px;
+    color: white;
+    background-color: red;
+    font-size: 16px;
+}
+
+/*====================== Hero section ======================*/
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 90vh;
+    background-image: url("../images/bg8.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: aqua; */
+    z-index: -5;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 90vh;
+    background-color: black;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.hero{
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+    /* justify-content: flex-end;
+    flex-direction: column; */
+}
+
+.hero .left{
+    width: 64%;
+    height: 90vh;
+}
+
+.hero .right{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.2rem;
+}
+
+.hero-buttons{
+    /* padding-left: 1.2rem; */
+    text-align: center;
+}
+
+
+/*============================ Menu Section ============================ */
+
+.shop-items{
+    display: grid;
+    grid-template-columns: repeat(4,223px);
+    gap: 40px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+    .shop-items{
+        grid-template-columns: repeat(2,223px);
+    }
+}
+
+@media (max-width: 500px){
+    .shop-items{
+        grid-template-columns: repeat(1,223px);
+    }
+}
+
+.item{
+    border: 2px solid #212529;
+    border-radius: 4px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.price-qty{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-qty{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 8px;
+    font-size: 20px;
+}
+
+
+
+
+
+/*----------------------------------------- Cart styling ------------------------------------------*/
+
+.cart-page{
+    display: grid;
+    grid-template-columns: 66.66% 33.33%;
+}
+
+.cart-items{
+    /* max-width: 70vw;
+    width: 850px; */
+    background-color: aliceblue;
+    padding: 25px 0px 0px 25px;
+}
+
+.c-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+}
+
+.cart-img{
+    padding: 15px;
+    border-radius: 19px;
+}
+
+.img-name-stock{
+    display: flex;
+}
+
+.name-stock-btn{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 10px;
+    justify-content: space-between;
+}
+
+.price-qnty{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 10px;
+    align-items: flex-end;
+    font-size: 16px;
+}
+
+/*----------- Price Details Container -----------*/
+
+.price-details-container{
+    display: flex;
+    justify-content: center;
+}
+
+/* .price-details{
+    width: 300px;
+    float: right;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+} */
+
+/* .price-details{
+    max-width: 300px;
+    width: -webkit-fill-available;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    top: 25%;
+    position: sticky;
+    padding: 12px;
+} */
+
+.price-details{
+    max-width: 300px;
+    height: 215px;
+    width: -webkit-fill-available;
+    margin: 20px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 16px;
+    top: 25%;
+    position: sticky;
+    padding: 12px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+}
+
+.price-title{
+    border-bottom: 1px solid gray;
+    border-bottom-style: inset;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+}
+
+.field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#total-field{
+    font-weight: bolder;
+    font-size: larger;
+    border-bottom: 1px dashed gray;
+    border-top: 1px dashed gray;
+    padding: 10px 0px;
+}
+
+
+/*---------------------------------------- Utility Classes ----------------------------------------*/
+
+.p-font{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 100;
+    color: white;
+}
+
+.s-heading{
+    /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Kaushan Script', cursive;
+    color: yellow;
+    /* padding: 1.1rem 0; */
+    /* margin-left: 2.3rem; */
+    font-size: 4.3rem;
+}
+
+.p-para{
+    /* font-family: 'Josefin Slab', serif; */
+    font-family: 'El Messiri', sans-serif;
+    /* color: white; */
+    color: white;
+    padding: 2.2rem 0;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    overflow: wrap;
+}
+
+.p-button{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-family: 'El Messiri', sans-serif;
+    border: 1px solid yellow;
+    padding: 1rem 1.2rem;
+    color: yellow;
+    background-color: transparent;
+    font-size: 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.s-button{
+    font-family: 'El Messiri', sans-serif;
+    border: 1px solid white;
+    padding: 1rem 1.2rem;
+    color: red;
+    background-color: yellow;
+    font-size: 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.p-button:hover{
+    background-color: whitesmoke;
+    transition: 0.5s;
+    color: red;
+}
+
+.s-button:hover{
+    background-color: transparent;
+    border-color: yellow;
+    transition: 0.5s;
+    color: white;
+}
+
+.bi-dash{
+    color: red;
+}
+
+.bi-plus{
+    color: green;
+}
+
+.footer{
+	text-align: center;
+    background-color: yellowgreen;
+    padding: 8px 8px;
+    margin-top: 28px;
+}
+
+.cart-btn{
+    /* font-family: 'El Messiri', sans-serif; */
+    border: 1px solid yellow;
+    padding: 6px 8px;
+    color: white;
+    background-color: yellowgreen;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.cart-btn:hover{
+    background-color: whitesmoke;
+    transition: 0.5s;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+
+.rem-btn{
+    /* font-family: 'El Messiri', sans-serif; */
+    border: 1px solid white;
+    padding: 4px 8px;
+    color: white;
+    background-color: yellowgreen;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.rem-btn:hover{
+    background-color: red;
+    transition: 0.5s;
+    color: white;
+}
+
+.go-to-cart{
+    text-decoration: none;
+    border: 1px solid yellow;
+    padding: 6px 8px;
+    color: white;
+    background-color: yellowgreen;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.go-to-cart:hover{
+    background-color: whitesmoke;
+    transition: 0.5s;
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
